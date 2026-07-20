@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+<g transform="translate(36 16) scale(4.5)" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M10 8h.01"/>
+<path d="M12 12h.01"/>
+<path d="M14 8h.01"/>
+<path d="M16 12h.01"/>
+<path d="M18 8h.01"/>
+<path d="M6 8h.01"/>
+<path d="M7 16h10"/>
+<path d="M8 12h.01"/>
+<rect width="20" height="16" x="2" y="4" rx="2"/>
+</g>
+<style>.icon-label{font-family:'Segoe UI',sans-serif;font-size:20px;font-weight:700;text-anchor:middle;letter-spacing:1px}</style>
+<text x="90" y="160" class="icon-label" fill="#F8FAFC">KEYS</text>
+</svg>

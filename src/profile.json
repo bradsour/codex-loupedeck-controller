@@ -1,0 +1,154 @@
+{
+  "profile": {
+    "name": "Codex Controller",
+    "description": "A four-workspace Loupedeck CT controller for the Codex desktop app.",
+    "applicationName": "chatgpt",
+    "applicationDisplayName": "Codex",
+    "processOrBundleName": "chatgpt",
+    "deviceType": "Loupedeck20",
+    "modeName": "main",
+    "version": "1.0.0"
+  },
+  "palette": {
+    "background": "#0B0F14",
+    "foreground": "#F8FAFC",
+    "muted": "#94A3B8",
+    "commands": "#2563EB",
+    "agents": "#0891B2",
+    "skills": "#7C3AED",
+    "text": "#059669",
+    "reasoning": "#EA580C",
+    "system": "#CA8A04"
+  },
+  "pages": [
+    {
+      "id": "commands",
+      "name": "Commands",
+      "color": "commands",
+      "buttons": [
+        "new_chat", "quick_chat", "side_chat",
+        "search_chats", "open_folder", "command_menu",
+        "review_tab", "toggle_terminal", "toggle_bottom",
+        "toggle_sidebar", "dictation", "shortcut_help"
+      ]
+    },
+    {
+      "id": "agents",
+      "name": "Agents",
+      "color": "agents",
+      "buttons": [
+        "previous_agent", "next_agent", "search_chats",
+        "new_chat", "side_chat", "standalone_chat",
+        "continue_new", "archive_chat", "toggle_pin",
+        "copy_markdown", "agent_status", "handoff"
+      ]
+    },
+    {
+      "id": "skills",
+      "name": "Skills",
+      "color": "skills",
+      "buttons": [
+        "skill_picker", "skill_openai_docs", "skill_browser",
+        "skill_github", "skill_fix_ci", "skill_documents",
+        "skill_pdf", "skill_slides", "skill_sheets",
+        "skill_visualize", "review_tab", "plan_toggle"
+      ]
+    },
+    {
+      "id": "quick_text",
+      "name": "Quick Text",
+      "color": "text",
+      "buttons": [
+        "finish_it", "agent_status", "root_cause",
+        "validate_all", "update_docs", "simplify",
+        "handoff", "test_first", "edge_cases",
+        "security_review", "performance_check", "explain_change"
+      ]
+    }
+  ],
+  "actions": [
+    {"id":"new_chat","label":"NEW\nCHAT","shortLabel":"NEW","displayName":"New Chat","description":"Start a new Codex chat","group":"Commands","color":"commands","lucideIcon":"square-pen","iconLabel":"NEW","type":"shortcut","key":"ControlOrCommand+KeyN","keyLabel":"Ctrl+N"},
+    {"id":"quick_chat","label":"QUICK\nCHAT","shortLabel":"QUICK","displayName":"Quick Chat","description":"Open the Codex quick-chat window","group":"Commands","color":"commands","lucideIcon":"messages-square","iconLabel":"QUICK","type":"shortcut","key":"ControlOrCommand+AltOrOption+KeyN","keyLabel":"Ctrl+Alt+N"},
+    {"id":"side_chat","label":"SIDE\nCHAT","shortLabel":"SIDE","displayName":"Open Side Chat","description":"Open the current context as a side chat","group":"Commands","color":"commands","lucideIcon":"message-circle-plus","iconLabel":"SIDE","type":"shortcut","key":"ControlOrCommand+AltOrOption+KeyS","keyLabel":"Ctrl+Alt+S"},
+    {"id":"standalone_chat","label":"STAND\nALONE","shortLabel":"SOLO","displayName":"New Standalone Chat","description":"Start a projectless standalone chat","group":"Agents","color":"agents","lucideIcon":"message-square-dashed","iconLabel":"SOLO","type":"shortcut","key":"ControlOrCommand+AltOrOption+KeyO","keyLabel":"Ctrl+Alt+O"},
+    {"id":"search_chats","label":"SEARCH\nCHATS","shortLabel":"FIND","displayName":"Search Chats","description":"Search Codex chats and agents","group":"Commands","color":"commands","lucideIcon":"search","iconLabel":"SEARCH","type":"shortcut","key":"ControlOrCommand+KeyG","keyLabel":"Ctrl+G"},
+    {"id":"open_folder","label":"OPEN\nFOLDER","shortLabel":"OPEN","displayName":"Open Folder","description":"Open a project folder","group":"Commands","color":"commands","lucideIcon":"folder-open","iconLabel":"OPEN","type":"shortcut","key":"ControlOrCommand+KeyO","keyLabel":"Ctrl+O"},
+    {"id":"command_menu","label":"COMMAND\nMENU","shortLabel":"CMD","displayName":"Command Menu","description":"Open the Codex command menu","group":"Commands","color":"commands","lucideIcon":"command","iconLabel":"COMMAND","type":"shortcut","key":"ControlOrCommand+KeyK","keyLabel":"Ctrl+K"},
+    {"id":"review_tab","label":"REVIEW\nPANEL","shortLabel":"REVIEW","displayName":"Toggle Review Panel","description":"Show or hide the Codex review panel","group":"Commands","color":"commands","lucideIcon":"panel-right","iconLabel":"REVIEW","type":"shortcut","key":"ControlOrCommand+AltOrOption+KeyB","keyLabel":"Ctrl+Alt+B"},
+    {"id":"toggle_terminal","label":"TOGGLE\nTERM","shortLabel":"TERM","displayName":"Toggle Terminal","description":"Show or hide the integrated terminal","group":"Commands","color":"commands","lucideIcon":"square-terminal","iconLabel":"TERM","type":"shortcut","key":"ControlOrCommand+Oem3","keyLabel":"Ctrl+`"},
+    {"id":"toggle_bottom","label":"BOTTOM\nPANEL","shortLabel":"PANEL","displayName":"Toggle Bottom Panel","description":"Show or hide the bottom panel","group":"Commands","color":"commands","lucideIcon":"panel-bottom","iconLabel":"BOTTOM","type":"shortcut","key":"ControlOrCommand+KeyJ","keyLabel":"Ctrl+J"},
+    {"id":"toggle_sidebar","label":"SIDE\nBAR","shortLabel":"BAR","displayName":"Toggle Sidebar","description":"Show or hide the sidebar","group":"Commands","color":"commands","lucideIcon":"panel-left","iconLabel":"SIDEBAR","type":"shortcut","key":"ControlOrCommand+KeyB","keyLabel":"Ctrl+B"},
+    {"id":"dictation","label":"DICTATE\nTEXT","shortLabel":"DICTATE","displayName":"Windows Voice Typing","description":"Start or stop Windows voice typing in the focused Codex composer","group":"Commands","color":"commands","lucideIcon":"mic","iconLabel":"DICTATE","type":"shortcut","key":"Windows+KeyH","keyLabel":"Win+H"},
+    {"id":"shortcut_help","label":"SHORTCUT\nHELP","shortLabel":"KEYS","displayName":"Keyboard Shortcuts","description":"Open Codex keyboard-shortcut settings","group":"Commands","color":"commands","lucideIcon":"keyboard","iconLabel":"KEYS","type":"shortcut","key":"ControlOrCommand+Shift+Oem2","keyLabel":"Ctrl+Shift+/"},
+
+    {"id":"previous_agent","label":"PREV\nAGENT","shortLabel":"PREV","displayName":"Previous Agent","description":"Switch to the previous Codex task/chat","group":"Agents","color":"agents","lucideIcon":"arrow-left","iconLabel":"PREV","type":"shortcut","key":"ControlOrCommand+PageUp","keyLabel":"Ctrl+PageUp"},
+    {"id":"next_agent","label":"NEXT\nAGENT","shortLabel":"NEXT","displayName":"Next Agent","description":"Switch to the next Codex task/chat","group":"Agents","color":"agents","lucideIcon":"arrow-right","iconLabel":"NEXT","type":"shortcut","key":"ControlOrCommand+PageDown","keyLabel":"Ctrl+PageDown"},
+    {"id":"archive_chat","label":"ARCHIVE\nCHAT","shortLabel":"ARCH","displayName":"Archive Chat","description":"Archive the active Codex chat","group":"Agents","color":"agents","lucideIcon":"archive","iconLabel":"ARCHIVE","type":"shortcut","key":"ControlOrCommand+Shift+KeyA","keyLabel":"Ctrl+Shift+A"},
+    {"id":"toggle_pin","label":"PIN /\nUNPIN","shortLabel":"PIN","displayName":"Pin or Unpin Chat","description":"Toggle the active chat pin","group":"Agents","color":"agents","lucideIcon":"pin","iconLabel":"PIN","type":"shortcut","key":"ControlOrCommand+AltOrOption+KeyP","keyLabel":"Ctrl+Alt+P"},
+    {"id":"continue_new","label":"CONTINUE\nNEW","shortLabel":"FORK","displayName":"Continue in New Chat","description":"Continue the active work in a new Codex chat using the custom direct shortcut","group":"Agents","color":"agents","lucideIcon":"split","iconRotation":90,"iconLabel":"FORK","type":"shortcut","key":"ControlOrCommand+AltOrOption+Shift+KeyN","keyLabel":"Ctrl+Alt+Shift+N"},
+    {"id":"copy_markdown","label":"COPY\nMARKDOWN","shortLabel":"COPY","displayName":"Copy Chat as Markdown","description":"Copy the active chat as Markdown using the custom direct shortcut","group":"Agents","color":"agents","lucideIcon":"clipboard-copy","iconLabel":"COPY","type":"shortcut","key":"ControlOrCommand+AltOrOption+Shift+KeyC","keyLabel":"Ctrl+Alt+Shift+C"},
+
+    {"id":"reason_increase","label":"REASON\nUP","shortLabel":"R+","displayName":"Increase Reasoning","description":"Increase reasoning effort using the custom Codex shortcut","group":"Reasoning","color":"reasoning","type":"shortcut","key":"ControlOrCommand+AltOrOption+Shift+ArrowUp","keyLabel":"Ctrl+Alt+Shift+Up"},
+    {"id":"reason_decrease","label":"REASON\nDOWN","shortLabel":"R-","displayName":"Decrease Reasoning","description":"Decrease reasoning effort using the custom Codex shortcut","group":"Reasoning","color":"reasoning","type":"shortcut","key":"ControlOrCommand+AltOrOption+Shift+ArrowDown","keyLabel":"Ctrl+Alt+Shift+Down"},
+    {"id":"reason_cycle","label":"CYCLE\nREASON","shortLabel":"REASON","displayName":"Cycle Reasoning","description":"Cycle reasoning effort using the custom Codex shortcut","group":"Reasoning","color":"reasoning","lucideIcon":"brain-circuit","iconLabel":"REASON","type":"shortcut","key":"ControlOrCommand+AltOrOption+Shift+KeyR","keyLabel":"Ctrl+Alt+Shift+R"},
+    {"id":"plan_toggle","label":"PLAN\nMODE","shortLabel":"PLAN","displayName":"Toggle Plan Mode","description":"Toggle Plan mode using the custom Codex shortcut","group":"Reasoning","color":"reasoning","lucideIcon":"lightbulb","iconLabel":"PLAN","type":"shortcut","key":"ControlOrCommand+AltOrOption+Shift+KeyP","keyLabel":"Ctrl+Alt+Shift+P"},
+    {"id":"fast_toggle","label":"FAST\nMODE","shortLabel":"FAST","displayName":"Toggle Fast Mode","description":"Toggle Fast mode using the custom Codex shortcut","group":"Reasoning","color":"reasoning","lucideIcon":"zap","iconLabel":"FAST","type":"shortcut","key":"ControlOrCommand+AltOrOption+Shift+KeyF","keyLabel":"Ctrl+Alt+Shift+F"},
+
+    {"id":"skill_picker","label":"SKILL\nPICKER","shortLabel":"$","displayName":"Skill Picker","description":"Insert $ to open the Codex skill picker","group":"Skills","color":"skills","type":"text","text":"$"},
+    {"id":"skill_openai_docs","label":"OPENAI\nDOCS","shortLabel":"OAI","displayName":"OpenAI Docs Skill","description":"Insert an official OpenAI documentation research prompt","group":"Skills","color":"skills","type":"text","text":"Use $openai-docs to check the latest official OpenAI documentation for this question. Cite the relevant official pages and distinguish verified facts from inference. "},
+    {"id":"skill_browser","label":"BROWSER\nTEST","shortLabel":"WEB","displayName":"Browser Skill","description":"Insert a browser inspection and testing prompt","group":"Skills","color":"skills","type":"text","text":"Use $browser to inspect the relevant page or local web app, reproduce the behavior, and capture evidence before proposing changes. "},
+    {"id":"skill_github","label":"GITHUB\nTRIAGE","shortLabel":"GH","displayName":"GitHub Skill","description":"Insert a GitHub triage prompt","group":"Skills","color":"skills","type":"text","text":"Use $github to inspect the relevant repository, issue, or pull request and give me an evidence-backed summary with next actions. "},
+    {"id":"skill_fix_ci","label":"FIX\nCI","shortLabel":"CI","displayName":"Fix CI Skill","description":"Insert a GitHub Actions diagnosis prompt","group":"Skills","color":"skills","type":"text","text":"Use $gh-fix-ci to inspect the failing GitHub Actions checks, identify the root cause from logs, and implement the approved fix. "},
+    {"id":"skill_documents","label":"WORD\nDOCS","shortLabel":"DOCX","displayName":"Documents Skill","description":"Insert a Word-document workflow prompt","group":"Skills","color":"skills","type":"text","text":"Use $documents to create or update the Word document, then render it and verify every page before delivery. "},
+    {"id":"skill_pdf","label":"PDF\nWORKFLOW","shortLabel":"PDF","displayName":"PDF Skill","description":"Insert a PDF workflow prompt","group":"Skills","color":"skills","type":"text","text":"Use $pdf to inspect or create the PDF, render it, and verify the final layout. "},
+    {"id":"skill_slides","label":"SLIDE\nDECK","shortLabel":"PPT","displayName":"Presentations Skill","description":"Insert a slide-deck workflow prompt","group":"Skills","color":"skills","type":"text","text":"Use $Presentations to create or revise the deck and visually verify the rendered slides. "},
+    {"id":"skill_sheets","label":"SPREAD\nSHEET","shortLabel":"XLSX","displayName":"Spreadsheets Skill","description":"Insert a workbook workflow prompt","group":"Skills","color":"skills","type":"text","text":"Use $Spreadsheets to create or analyze the workbook and verify formulas, formatting, and outputs. "},
+    {"id":"skill_visualize","label":"VISUAL\nLAB","shortLabel":"VIZ","displayName":"Visualize Skill","description":"Insert an interactive visualization prompt","group":"Skills","color":"skills","type":"text","text":"Use $visualize to make an interactive explanation or comparison with the smallest useful controls. "},
+
+    {"id":"finish_it","label":"FINISH\nIT","shortLabel":"DONE","displayName":"Finish It","description":"Insert a persistent completion prompt","group":"Quick Text","color":"text","type":"text","text":"Finish the task completely. Keep going until the requested outcome is implemented and verified; clearly report any genuine blocker. "},
+    {"id":"agent_status","label":"STATUS\nCHECK","shortLabel":"STATUS","displayName":"Status Check","description":"Insert a concise status request","group":"Quick Text","color":"text","lucideIcon":"activity","iconLabel":"STATUS","type":"text","text":"Give me a concise status: what is complete, what is in progress, what remains, and any blocker. "},
+    {"id":"root_cause","label":"ROOT\nCAUSE","shortLabel":"CAUSE","displayName":"Root Cause","description":"Insert a diagnosis-first prompt","group":"Quick Text","color":"text","type":"text","text":"Diagnose the root cause first. Show the evidence, then propose the smallest reliable fix. Do not implement until the diagnosis is clear. "},
+    {"id":"validate_all","label":"VALIDATE\nALL","shortLabel":"CHECK","displayName":"Validate All","description":"Insert an end-to-end validation prompt","group":"Quick Text","color":"text","type":"text","text":"Validate the result end to end. Run the relevant tests, linters, type checks, and smoke checks; report exact failures and anything that needs manual testing. "},
+    {"id":"update_docs","label":"UPDATE\nDOCS","shortLabel":"DOCS","displayName":"Update Documentation","description":"Insert a documentation update prompt","group":"Quick Text","color":"text","type":"text","text":"Update the documentation to match the final behavior, including setup, usage, limitations, and troubleshooting. "},
+    {"id":"simplify","label":"SIMPLIFY\nDIFF","shortLabel":"LEAN","displayName":"Simplify","description":"Insert a focused simplification prompt","group":"Quick Text","color":"text","type":"text","text":"Simplify this without changing behavior. Remove unnecessary complexity, improve naming, and keep the diff focused. "},
+    {"id":"handoff","label":"HANDOFF\nSUMMARY","shortLabel":"HANDOFF","displayName":"Handoff Summary","description":"Insert a complete handoff prompt","group":"Quick Text","color":"text","lucideIcon":"summary","iconLabel":"HANDOFF","type":"text","text":"Prepare a handoff summary with the goal, decisions, files changed, validation performed, remaining risks, and exact next steps. "},
+    {"id":"test_first","label":"TEST\nFIRST","shortLabel":"TDD","displayName":"Test First","description":"Insert a regression-test-first prompt","group":"Quick Text","color":"text","type":"text","text":"Write or update a failing test that captures the bug or requirement, then implement the smallest fix and rerun the focused suite. "},
+    {"id":"edge_cases","label":"EDGE\nCASES","shortLabel":"EDGES","displayName":"Edge Cases","description":"Insert an edge-case review prompt","group":"Quick Text","color":"text","type":"text","text":"Review this for edge cases, failure modes, race conditions, and platform differences. Fix confirmed issues and add focused tests. "},
+    {"id":"security_review","label":"SECURITY\nREVIEW","shortLabel":"SEC","displayName":"Security Review","description":"Insert a focused security-review prompt","group":"Quick Text","color":"text","type":"text","text":"Perform a focused security review of the changed surface: inputs, permissions, secrets, injection risks, data exposure, and unsafe defaults. "},
+    {"id":"performance_check","label":"PERF\nCHECK","shortLabel":"PERF","displayName":"Performance Check","description":"Insert a measured performance-review prompt","group":"Quick Text","color":"text","type":"text","text":"Check the changed path for measurable performance risks. Identify hot spots, avoid premature optimization, and benchmark when practical. "},
+    {"id":"explain_change","label":"EXPLAIN\nCHANGE","shortLabel":"WHY","displayName":"Explain Change","description":"Insert a maintainer-level explanation prompt","group":"Quick Text","color":"text","type":"text","text":"Explain the implementation at the level of a maintainer: architecture, control flow, tradeoffs, and how to test or extend it. "},
+
+    {"id":"page_up","label":"PAGE\nUP","shortLabel":"PG UP","displayName":"Page Up","description":"Scroll the transcript up one page","group":"Navigation","color":"system","type":"shortcut","key":"PageUp","keyLabel":"Page Up"},
+    {"id":"page_down","label":"PAGE\nDOWN","shortLabel":"PG DN","displayName":"Page Down","description":"Scroll the transcript down one page","group":"Navigation","color":"system","type":"shortcut","key":"PageDown","keyLabel":"Page Down"},
+    {"id":"go_latest","label":"LATEST","shortLabel":"END","displayName":"Go to Latest","description":"Jump to the end of the active view","group":"Navigation","color":"system","type":"shortcut","key":"End","keyLabel":"End"},
+    {"id":"zoom_out","label":"FONT\nSMALLER","shortLabel":"A-","displayName":"Decrease Font Size","description":"Decrease Codex UI font size","group":"Navigation","color":"system","type":"shortcut","key":"ControlOrCommand+Minus","keyLabel":"Ctrl+-"},
+    {"id":"zoom_in","label":"FONT\nLARGER","shortLabel":"A+","displayName":"Increase Font Size","description":"Increase Codex UI font size","group":"Navigation","color":"system","type":"shortcut","key":"ControlOrCommand+Equals","keyLabel":"Ctrl++"},
+    {"id":"previous_tab","label":"PREV\nTAB","shortLabel":"TAB-","displayName":"Previous Tab","description":"Switch to the previous Codex tab","group":"Navigation","color":"system","type":"shortcut","key":"ControlOrCommand+Shift+Tab","keyLabel":"Ctrl+Shift+Tab"},
+    {"id":"next_tab","label":"NEXT\nTAB","shortLabel":"TAB+","displayName":"Next Tab","description":"Switch to the next Codex tab","group":"Navigation","color":"system","type":"shortcut","key":"ControlOrCommand+Tab","keyLabel":"Ctrl+Tab"},
+    {"id":"arrow_up","label":"UP","shortLabel":"UP","displayName":"Arrow Up","description":"Send Arrow Up","group":"Navigation","color":"system","type":"shortcut","key":"ArrowUp","keyLabel":"Arrow Up"},
+    {"id":"arrow_down","label":"DOWN","shortLabel":"DOWN","displayName":"Arrow Down","description":"Send Arrow Down","group":"Navigation","color":"system","type":"shortcut","key":"ArrowDown","keyLabel":"Arrow Down"},
+    {"id":"arrow_left","label":"LEFT","shortLabel":"LEFT","displayName":"Arrow Left","description":"Send Arrow Left","group":"Navigation","color":"system","type":"shortcut","key":"ArrowLeft","keyLabel":"Arrow Left"},
+    {"id":"arrow_right","label":"RIGHT","shortLabel":"RIGHT","displayName":"Arrow Right","description":"Send Arrow Right","group":"Navigation","color":"system","type":"shortcut","key":"ArrowRight","keyLabel":"Arrow Right"},
+    {"id":"home_key","label":"HOME","shortLabel":"HOME","displayName":"Home Key","description":"Send Home","group":"Navigation","color":"system","type":"shortcut","key":"Home","keyLabel":"Home"}
+  ],
+  "dials": [
+    {"position":"L1","name":"Agents","left":"previous_agent","right":"next_agent","press":"search_chats"},
+    {"position":"L2","name":"Transcript","left":"page_up","right":"page_down","press":"go_latest"},
+    {"position":"L3","name":"Font Size","left":"zoom_out","right":"zoom_in","press":"shortcut_help"},
+    {"position":"R1","name":"Reasoning","left":"reason_decrease","right":"reason_increase","press":"reason_cycle"},
+    {"position":"R2","name":"System Volume","nativeAdjustment":"$DefaultWin___Volume","nativePress":"$DefaultWin___ResetVolume"},
+    {"position":"R3","name":"Tabs","left":"previous_tab","right":"next_tab","press":"toggle_bottom"}
+  ],
+  "wheel": {"name":"Reasoning + Modes","left":"plan_toggle","center":"reason_cycle","right":"fast_toggle","adjustment":"reasoning"},
+  "roundButtons": [
+    {"workspace":"commands"}, {"workspace":"agents"}, {"workspace":"skills"}, {"workspace":"quick_text"},
+    {"action":"new_chat"}, {"action":"quick_chat"}, {"action":"review_tab"}, {"action":"dictation"}
+  ],
+  "squareButtons": {
+    "A":{"press":"arrow_up","fn":"page_up"},
+    "B":{"press":"arrow_left","fn":"home_key"},
+    "C":{"press":"arrow_down","fn":"page_down"},
+    "D":{"press":"arrow_right","fn":"go_latest"},
+    "E":{"press":"command_menu"}
+  }
+}

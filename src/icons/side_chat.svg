@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+<g transform="translate(36 16) scale(4.5)" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/>
+<path d="M8 12h8"/>
+<path d="M12 8v8"/>
+</g>
+<style>.icon-label{font-family:'Segoe UI',sans-serif;font-size:20px;font-weight:700;text-anchor:middle;letter-spacing:1px}</style>
+<text x="90" y="160" class="icon-label" fill="#F8FAFC">SIDE</text>
+</svg>

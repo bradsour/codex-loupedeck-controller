@@ -1,0 +1,34 @@
+[
+  {
+    "command": "composer.decreaseReasoningEffort",
+    "key": "Ctrl+Alt+Shift+Down"
+  },
+  {
+    "command": "composer.increaseReasoningEffort",
+    "key": "Ctrl+Alt+Shift+Up"
+  },
+  {
+    "command": "composer.cycleReasoningEffort",
+    "key": "Ctrl+Alt+Shift+R"
+  },
+  {
+    "command": "composer.togglePlanMode",
+    "key": "Ctrl+Alt+Shift+P"
+  },
+  {
+    "command": "composer.toggleFastMode",
+    "key": "Ctrl+Alt+Shift+F"
+  },
+  {
+    "command": "composer.startDictation",
+    "key": "Ctrl+Shift+D"
+  },
+  {
+    "command": "forkThread",
+    "key": "Ctrl+Alt+Shift+N"
+  },
+  {
+    "command": "copyConversationMarkdown",
+    "key": "Ctrl+Alt+Shift+C"
+  }
+]

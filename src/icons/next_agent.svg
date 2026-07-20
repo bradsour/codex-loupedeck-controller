@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+<g transform="translate(36 16) scale(4.5)" fill="none" stroke="#0891B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M5 12h14"/>
+<path d="m12 5 7 7-7 7"/>
+</g>
+<style>.icon-label{font-family:'Segoe UI',sans-serif;font-size:20px;font-weight:700;text-anchor:middle;letter-spacing:1px}</style>
+<text x="90" y="160" class="icon-label" fill="#F8FAFC">NEXT</text>
+</svg>

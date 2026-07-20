@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+<g transform="translate(36 16) scale(4.5)" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/>
+</g>
+<style>.icon-label{font-family:'Segoe UI',sans-serif;font-size:20px;font-weight:700;text-anchor:middle;letter-spacing:1px}</style>
+<text x="90" y="160" class="icon-label" fill="#F8FAFC">STATUS</text>
+</svg>

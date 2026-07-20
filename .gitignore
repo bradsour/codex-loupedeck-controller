@@ -1,0 +1,26 @@
+# Local working data and backups
+.tmp/
+backups/
+research/System-reference.LP4
+
+# Machine-specific installed exports and validation evidence
+dist/Codex-Controller-installed.LP4
+dist/package/
+dist/profile-map.json
+docs/change-log.md
+docs/installation-and-rollback.md
+docs/validation-results.json
+docs/validation-results.md
+tools/validate_profile.py
+tools/loupedeck-service.mjs
+
+# Python and editor artifacts
+__pycache__/
+*.py[cod]
+.venv/
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store

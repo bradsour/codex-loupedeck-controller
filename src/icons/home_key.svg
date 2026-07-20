@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+<style>.short,.label{font-family:'Segoe UI',sans-serif;text-anchor:middle}.short{font-weight:700}.label{font-size:22px;font-weight:600;fill:#CBD5E1}</style>
+<rect width="180" height="180" rx="24" fill="#111827" stroke="#CA8A04" stroke-width="5"/>
+<path d="M4 24V16Q4 4 16 4H164Q176 4 176 16V24Z" fill="#CA8A04"/>
+<text x="90" y="82" class="short" font-size="48" fill="#F8FAFC">HOME</text>
+<text x="90" y="124" class="label">HOME</text>
+</svg>

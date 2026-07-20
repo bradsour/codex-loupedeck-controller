@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+<g transform="translate(36 16) scale(4.5)" fill="none" stroke="#0891B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M14 3h2"/>
+<path d="M16 19h-2"/>
+<path d="M2 12v-2"/>
+<path d="M2 16v5.286a.71.71 0 0 0 1.212.502l1.149-1.149"/>
+<path d="M20 19a2 2 0 0 0 2-2v-1"/>
+<path d="M22 10v2"/>
+<path d="M22 6V5a2 2 0 0 0-2-2"/>
+<path d="M4 3a2 2 0 0 0-2 2v1"/>
+<path d="M8 19h2"/>
+<path d="M8 3h2"/>
+</g>
+<style>.icon-label{font-family:'Segoe UI',sans-serif;font-size:20px;font-weight:700;text-anchor:middle;letter-spacing:1px}</style>
+<text x="90" y="160" class="icon-label" fill="#F8FAFC">SOLO</text>
+</svg>

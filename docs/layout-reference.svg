@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1500" viewBox="0 0 1600 1500">
+<style>text{font-family:'Segoe UI',sans-serif}.title{font-size:54px;font-weight:700;fill:#F8FAFC}.page{font-size:32px;font-weight:700}.body{font-size:25px;fill:#CBD5E1}.note{font-size:24px;fill:#94A3B8}</style>
+<rect width="1600" height="1500" fill="#0B0F14"/>
+<text x="60" y="82" class="title">CODEX CONTROLLER · LOUPEDECK CT</text>
+<text x="60" y="170" class="page" fill="#2563EB">ROUND 1 · COMMANDS</text>
+<text x="90" y="225" class="body">New Chat  ·  Quick Chat  ·  Open Side Chat</text>
+<text x="90" y="267" class="body">Search Chats  ·  Open Folder  ·  Command Menu</text>
+<text x="90" y="309" class="body">Toggle Review Panel  ·  Toggle Terminal  ·  Toggle Bottom Panel</text>
+<text x="90" y="351" class="body">Toggle Sidebar  ·  Windows Voice Typing  ·  Keyboard Shortcuts</text>
+<text x="60" y="431" class="page" fill="#0891B2">ROUND 2 · AGENTS</text>
+<text x="90" y="486" class="body">Previous Agent  ·  Next Agent  ·  Search Chats</text>
+<text x="90" y="528" class="body">New Chat  ·  Open Side Chat  ·  New Standalone Chat</text>
+<text x="90" y="570" class="body">Continue in New Chat  ·  Archive Chat  ·  Pin or Unpin Chat</text>
+<text x="90" y="612" class="body">Copy Chat as Markdown  ·  Status Check  ·  Handoff Summary</text>
+<text x="60" y="692" class="page" fill="#7C3AED">ROUND 3 · SKILLS</text>
+<text x="90" y="747" class="body">Skill Picker  ·  OpenAI Docs Skill  ·  Browser Skill</text>
+<text x="90" y="789" class="body">GitHub Skill  ·  Fix CI Skill  ·  Documents Skill</text>
+<text x="90" y="831" class="body">PDF Skill  ·  Presentations Skill  ·  Spreadsheets Skill</text>
+<text x="90" y="873" class="body">Visualize Skill  ·  Toggle Review Panel  ·  Toggle Plan Mode</text>
+<text x="60" y="953" class="page" fill="#059669">ROUND 4 · QUICK TEXT</text>
+<text x="90" y="1008" class="body">Finish It  ·  Status Check  ·  Root Cause</text>
+<text x="90" y="1050" class="body">Validate All  ·  Update Documentation  ·  Simplify</text>
+<text x="90" y="1092" class="body">Handoff Summary  ·  Test First  ·  Edge Cases</text>
+<text x="90" y="1134" class="body">Security Review  ·  Performance Check  ·  Explain Change</text>
+<text x="60" y="1224" class="page" fill="#EA580C">WHEEL</text>
+<text x="90" y="1269" class="body">turn: reasoning down / up · touch: Plan / Cycle Reasoning / Fast</text>
+<text x="60" y="1329" class="note">Quick text and skill prompts insert only; press Enter yourself after review.</text>
+</svg>

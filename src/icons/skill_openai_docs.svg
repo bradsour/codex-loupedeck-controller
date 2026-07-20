@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+<style>.short,.label{font-family:'Segoe UI',sans-serif;text-anchor:middle}.short{font-weight:700}.label{font-size:22px;font-weight:600;fill:#CBD5E1}</style>
+<rect width="180" height="180" rx="24" fill="#111827" stroke="#7C3AED" stroke-width="5"/>
+<path d="M4 24V16Q4 4 16 4H164Q176 4 176 16V24Z" fill="#7C3AED"/>
+<text x="90" y="82" class="short" font-size="48" fill="#F8FAFC">OAI</text>
+<text x="90" y="112" class="label">OPENAI</text>
+<text x="90" y="138" class="label">DOCS</text>
+</svg>
