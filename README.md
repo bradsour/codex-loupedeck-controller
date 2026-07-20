@@ -2,7 +2,9 @@
 
 A polished four-page Loupedeck CT profile for the Codex Windows app, inspired by Work Louder's [Codex Micro](https://worklouder.cc/codex-micro). It provides Codex commands, task navigation, reusable skill prompts, quick text, dials, wheel controls, keyboard shortcuts, and custom Lucide/shadcn-style icons.
 
-![Codex Controller running on a Loupedeck CT](docs/codex-controller-loupedeck-ct.png)
+| Commands page | Agents page |
+|---|---|
+| ![Commands page on a Loupedeck CT](docs/codex-controller-loupedeck-ct.png) | ![Agents page on a Loupedeck CT](docs/codex-controller-agents-page.png) |
 
 Full generated layout:
 
