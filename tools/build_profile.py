@@ -235,14 +235,15 @@ def config_for_target(base_config: dict, target: str) -> dict:
         return config
 
     profile = config["profile"]
-    profile["name"] = "Codex Controller Live S"
+    profile["name"] = "Codex Controller Live S 1.1.1"
     profile["description"] = "A four-workspace Loupedeck Live S controller for the Codex desktop app."
     profile["deviceType"] = "Loupedeck50"
+    profile["version"] = "1.1.1"
     for page in config["pages"]:
         page["buttons"] = LIVE_S_PAGE_BUTTONS[page["id"]]
     config["dials"] = [
         {"position": "Top", "name": "Agents", "left": "previous_agent", "right": "next_agent", "press": "search_chats"},
-        {"position": "Bottom", "name": "Reasoning", "left": "reason_decrease", "right": "reason_increase", "press": "reason_cycle"},
+        {"position": "Bottom", "name": "Reasoning", "left": "reason_decrease", "right": "reason_increase", "press": "voice_chat"},
     ]
     return config
 
@@ -663,7 +664,9 @@ def live_s_page_preview(config: dict, actions: dict, page_id: str) -> bytes:
     draw.text((835, 390), "BOTTOM", font=label_font, fill=palette["reasoning"])
     draw.ellipse((850, 435, 950, 535), fill="#111827", outline=palette["reasoning"], width=4)
     draw.text((820, 550), "REASONING", font=label_font, fill=palette["foreground"])
-    draw.text((825, 580), "press: cycle", font=small_font, fill=palette["muted"])
+    bottom_dial = config["dials"][1]
+    bottom_press = actions[bottom_dial["press"]]["shortLabel"].lower()
+    draw.text((825, 580), f"press: {bottom_press}", font=small_font, fill=palette["muted"])
 
     button_names = ("COMMANDS", "AGENTS", "SKILLS", "QUICK TEXT")
     for index, name in enumerate(button_names):

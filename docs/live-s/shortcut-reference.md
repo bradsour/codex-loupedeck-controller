@@ -87,7 +87,7 @@ Generated from `src/profile.json`. Quick-text and skill buttons insert text only
 | Dial | Turn left | Press | Turn right |
 |---|---|---|---|
 | Top · Agents | Previous Agent | Search Chats | Next Agent |
-| Bottom · Reasoning | Decrease Reasoning | Cycle Reasoning | Increase Reasoning |
+| Bottom · Reasoning | Decrease Reasoning | Toggle Voice Chat | Increase Reasoning |
 
 ## Physical buttons
 

@@ -26,7 +26,7 @@ Full Live S mapping:
 
 - Four touchscreen pages: Commands, Agents, Skills, and Quick Text.
 - CT: six consistent dial assignments plus Plan, Reasoning, and Fast controls on the center wheel.
-- Live S: task navigation and reasoning controls on its two dials, with four physical workspace buttons.
+- Live S: task navigation and reasoning controls on its two dials, Voice Chat on the bottom-dial press, and four physical workspace buttons.
 - Custom, editable Lucide-style SVG icons on black unboxed backgrounds.
 - Direct shortcuts for Reasoning, Plan, Fast, Continue in New Chat, and Copy as Markdown.
 - Windows Voice Typing (`Win+H`) for reliable press-on/press-off dictation.
@@ -68,27 +68,15 @@ if (Test-Path $target) {
 
 ### 3. Install or merge the Codex keybindings
 
-The Loupedeck profile expects the eight bindings in [`src/codex-keybindings.json`](src/codex-keybindings.json). The following PowerShell script preserves unrelated existing bindings and replaces only matching command IDs:
+The Loupedeck profiles expect the nine bindings in [`src/codex-keybindings.json`](src/codex-keybindings.json). Run the included installer from the repository root:
 
 ```powershell
-$templatePath = Resolve-Path ".\src\codex-keybindings.json"
-$targetPath = Join-Path $HOME ".codex\keybindings.json"
-$targetDirectory = Split-Path $targetPath
-
-New-Item -ItemType Directory -Path $targetDirectory -Force | Out-Null
-$template = @(Get-Content $templatePath -Raw | ConvertFrom-Json)
-$existing = if (Test-Path $targetPath) {
-    @(Get-Content $targetPath -Raw | ConvertFrom-Json)
-} else {
-    @()
-}
-
-$managedCommands = @($template | ForEach-Object command)
-$merged = @($existing | Where-Object command -NotIn $managedCommands) + $template
-$merged | ConvertTo-Json -Depth 5 | Set-Content $targetPath -Encoding utf8
+.\tools\install-codex-keybindings.ps1
 ```
 
-Restart Codex once after creating or changing `~/.codex/keybindings.json`.
+The installer validates both files, preserves unrelated bindings, detects shortcut conflicts, creates a timestamped backup when a file already exists, writes atomically, and verifies all managed bindings. Use `-WhatIf` to preview the target or `-Force` to replace unrelated entries that use one of the required shortcuts.
+
+Restart Codex once after creating or changing `%USERPROFILE%\.codex\keybindings.json`.
 
 The installed bindings are:
 
@@ -100,6 +88,7 @@ The installed bindings are:
 | Toggle Plan mode | `Ctrl+Alt+Shift+P` |
 | Toggle Fast mode | `Ctrl+Alt+Shift+F` |
 | Native push-to-talk dictation | `Ctrl+Shift+D` |
+| Toggle Voice Chat | `Ctrl+Alt+Shift+V` |
 | Continue in New Chat / Fork | `Ctrl+Alt+Shift+N` |
 | Copy conversation as Markdown | `Ctrl+Alt+Shift+C` |
 
@@ -109,7 +98,7 @@ The installed bindings are:
 2. Open profile management and choose **Import**.
 3. Select `dist/Codex-Controller.LP4` for CT or `dist/Codex-Controller-Live-S.LP4` for Live S.
 4. Associate it with Codex or `ChatGPT.exe` if Loupedeck asks.
-5. Make **Codex Controller** (CT) or **Codex Controller Live S** (Live S) the default profile for that application.
+5. Make **Codex Controller** (CT) or **Codex Controller Live S 1.1.1** (Live S) the default profile for that application.
 6. Enable automatic application following/profile switching.
 
 When Codex is focused, Loupedeck should select the `chatgpt` application profile. When another application is focused, it should return to that application's profile or System.
@@ -131,6 +120,10 @@ Codex's native `Ctrl+Shift+D` command is push-to-talk: it listens only while the
 
 The touchscreen and round Dictate controls use Windows Voice Typing (`Win+H`) instead. Press once to start and again to stop. `Ctrl+Shift+D` remains in the supplied keybindings for use from a physical keyboard.
 
+On Live S, turn the bottom dial to adjust reasoning effort and press it to start or stop Codex Voice Chat. On CT, round button 8 starts or stops Voice Chat. The Commands-page Dictate control remains available on both devices for Windows Voice Typing.
+
+The Live S package uses the visible name **Codex Controller Live S 1.1.1** so it remains selectable when Loupedeck retains an older profile. After importing, select the 1.1.1 profile and make it the default for Codex. Once the updated controls and icons are confirmed, the older Live S profiles can be deleted.
+
 ## Troubleshooting
 
 ### The profile does not switch when Codex opens
@@ -142,7 +135,7 @@ The touchscreen and round Dictate controls use Windows Voice Typing (`Win+H`) in
 
 ### Reasoning, Plan, Fast, Fork, or Copy Markdown does nothing
 
-- Confirm the eight entries are present in `%USERPROFILE%\.codex\keybindings.json`.
+- Confirm the nine entries are present in `%USERPROFILE%\.codex\keybindings.json`.
 - Restart Codex after changing that file.
 - Open **Settings → Keyboard Shortcuts** and confirm the intended shortcut appears.
 - Test the shortcut on the physical keyboard before testing Loupedeck.
@@ -161,6 +154,7 @@ Use the Loupedeck Dictate control mapped to `Win+H`. Do not replace it with nati
 
 - [`docs/layout-reference.png`](docs/layout-reference.png) — complete printable layout.
 - [`docs/live-s/layout-reference.png`](docs/live-s/layout-reference.png) — complete printable Live S layout.
+- [`docs/live-s/manual-test-checklist.md`](docs/live-s/manual-test-checklist.md) — Live S reasoning and Voice Chat checks.
 - [`docs/shortcut-reference.md`](docs/shortcut-reference.md) — every touchscreen, dial, wheel, and physical-button mapping.
 - [`docs/icon-preview.png`](docs/icon-preview.png) — icon reference.
 - [`docs/codex-custom-shortcuts.md`](docs/codex-custom-shortcuts.md) — details about the custom Codex bindings.
@@ -199,6 +193,7 @@ src/profile.json              Editable controller definition
 src/codex-keybindings.json    Mergeable Codex shortcut definitions
 src/icons/                    Editable SVG icons
 tools/build_profile.py        Profile and documentation generator
+tools/install-codex-keybindings.ps1  Safe Codex shortcut installer
 docs/                         Layout, shortcuts, icons, and test checklist
 ```
 
