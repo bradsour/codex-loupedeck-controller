@@ -1,19 +1,32 @@
-# Codex Controller for Loupedeck CT
+# Codex Controller for Loupedeck CT and Live S
 
-A polished four-page Loupedeck CT profile for the Codex Windows app, inspired by Work Louder's [Codex Micro](https://worklouder.cc/codex-micro). It provides Codex commands, task navigation, reusable skill prompts, quick text, dials, wheel controls, keyboard shortcuts, and custom Lucide/shadcn-style icons.
+A polished four-page controller for the Codex Windows app, with separate profiles for Loupedeck CT and Loupedeck Live S. It provides Codex commands, task navigation, reusable skill prompts, quick text, dials, keyboard shortcuts, and custom Lucide/shadcn-style icons.
+
+### Loupedeck CT
 
 | Commands page | Agents page |
 |---|---|
 | ![Commands page on a Loupedeck CT](docs/codex-controller-loupedeck-ct.png) | ![Agents page on a Loupedeck CT](docs/codex-controller-agents-page.png) |
 
-Full generated layout:
+Full CT mapping:
 
 ![Complete controller layout](docs/layout-reference.png)
+
+### Loupedeck Live S
+
+| Commands page | Agents page |
+|---|---|
+| ![Commands page on a Loupedeck Live S](docs/live-s/codex-controller-live-s-commands.png) | ![Agents page on a Loupedeck Live S](docs/live-s/codex-controller-live-s-agents.png) |
+
+Full Live S mapping:
+
+![Complete Live S controller layout](docs/live-s/layout-reference.png)
 
 ## Features
 
 - Four touchscreen pages: Commands, Agents, Skills, and Quick Text.
-- Six consistent dial assignments plus Plan, Reasoning, and Fast controls on the center wheel.
+- CT: six consistent dial assignments plus Plan, Reasoning, and Fast controls on the center wheel.
+- Live S: task navigation and reasoning controls on its two dials, with four physical workspace buttons.
 - Custom, editable Lucide-style SVG icons on black unboxed backgrounds.
 - Direct shortcuts for Reasoning, Plan, Fast, Continue in New Chat, and Copy as Markdown.
 - Windows Voice Typing (`Win+H`) for reliable press-on/press-off dictation.
@@ -24,18 +37,19 @@ Full generated layout:
 
 - Windows 11.
 - Codex desktop app for Windows.
-- Loupedeck CT and the current Loupedeck configuration software.
+- Loupedeck CT or Loupedeck Live S and the current Loupedeck configuration software.
 - Python 3 and Pillow only if you want to edit and rebuild the profile.
 
-The supplied profile targets Loupedeck device family `Loupedeck20` and the Codex process identifier `chatgpt` (`ChatGPT.exe`). Other Loupedeck models and macOS have not been tested.
+The CT profile targets device family `Loupedeck20`; the Live S profile targets `Loupedeck50`. Both use the Codex process identifier `chatgpt` (`ChatGPT.exe`). Other Loupedeck models and macOS have not been tested.
 
 ## Installation
 
 ### 1. Download the project
 
-Clone the repository or download it as a ZIP, then extract it. The ready-to-import profile is:
+Clone the repository or download it as a ZIP, then extract it. Choose the profile for your device:
 
-[`dist/Codex-Controller.LP4`](dist/Codex-Controller.LP4)
+- CT: [`dist/Codex-Controller.LP4`](dist/Codex-Controller.LP4)
+- Live S: [`dist/Codex-Controller-Live-S.LP4`](dist/Codex-Controller-Live-S.LP4)
 
 ### 2. Back up your current configuration
 
@@ -93,9 +107,9 @@ The installed bindings are:
 
 1. Open the Loupedeck configuration application.
 2. Open profile management and choose **Import**.
-3. Select `dist/Codex-Controller.LP4`.
+3. Select `dist/Codex-Controller.LP4` for CT or `dist/Codex-Controller-Live-S.LP4` for Live S.
 4. Associate it with Codex or `ChatGPT.exe` if Loupedeck asks.
-5. Make **Codex Controller** the default profile for that application.
+5. Make **Codex Controller** (CT) or **Codex Controller Live S** (Live S) the default profile for that application.
 6. Enable automatic application following/profile switching.
 
 When Codex is focused, Loupedeck should select the `chatgpt` application profile. When another application is focused, it should return to that application's profile or System.
@@ -146,6 +160,7 @@ Use the Loupedeck Dictate control mapped to `Win+H`. Do not replace it with nati
 ## Layout and reference files
 
 - [`docs/layout-reference.png`](docs/layout-reference.png) — complete printable layout.
+- [`docs/live-s/layout-reference.png`](docs/live-s/layout-reference.png) — complete printable Live S layout.
 - [`docs/shortcut-reference.md`](docs/shortcut-reference.md) — every touchscreen, dial, wheel, and physical-button mapping.
 - [`docs/icon-preview.png`](docs/icon-preview.png) — icon reference.
 - [`docs/codex-custom-shortcuts.md`](docs/codex-custom-shortcuts.md) — details about the custom Codex bindings.
@@ -162,10 +177,14 @@ py -m pip install Pillow
 py tools\build_profile.py
 ```
 
+This builds both device profiles. Use `--target ct` or `--target live-s` to build only one.
+
 The generator recreates:
 
 - `dist/Codex-Controller.LP4`;
+- `dist/Codex-Controller-Live-S.LP4`;
 - `dist/package/`;
+- `dist/package-live-s/`;
 - editable SVG icon sources;
 - the layout and shortcut reference sheets.
 
@@ -174,7 +193,8 @@ The generator uses stable action IDs, so unchanged controls retain their IDs bet
 ## Project structure
 
 ```text
-dist/Codex-Controller.LP4     Ready-to-import profile
+dist/Codex-Controller.LP4          Ready-to-import CT profile
+dist/Codex-Controller-Live-S.LP4   Ready-to-import Live S profile
 src/profile.json              Editable controller definition
 src/codex-keybindings.json    Mergeable Codex shortcut definitions
 src/icons/                    Editable SVG icons
